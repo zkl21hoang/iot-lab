@@ -1,6 +1,4 @@
-Here's a detailed summary of each lab topic in the "Physical Attack Lab Report":
-
-### 1. Instruction Power Differences (Lab A)
+### 1. Instruction Power Differences
 
 - **Attack Strategy:** Examining how power consumption in a microcontroller varies with different operations and instructions.
 - **Purpose of Attack:** To capture a power trace with ChipWhisperer and identify connections between instructions and power traces.
@@ -12,7 +10,7 @@ Here's a detailed summary of each lab topic in the "Physical Attack Lab Report":
   - Experimenting with different instructions, including empty traces, simple instructions, instruction loops, and expensive instructions.
 - **Reason to be Vulnerable:** The power consumption pattern changes noticeably with different instructions, allowing for analysis and potentially identifying the instructions being executed.
 
-### 2. Power Analysis for Password Bypass (Lab B)
+### 2. Power Analysis for Password Bypass
 
 - **Attack Strategy:** Utilizing power analysis to bypass a password.
 - **Purpose of Attack:** To understand how power variations can reveal timing information and differences in code execution paths.
@@ -24,7 +22,7 @@ Here's a detailed summary of each lab topic in the "Physical Attack Lab Report":
   - Analyzing differences in power traces to brute-force the password.
 - **Reason to be Vulnerable:** The device's power consumption varies depending on the correctness of password characters, revealing information about the correct password.
 
-### 3. Large Hamming Weight Swings (Topic 1)
+### 3. Large Hamming Weight Swings
 
 - **Attack Strategy:** Analyzing power consumption related to data manipulation in a microcontroller.
 - **Purpose of Attack:** To use power measurements for validating a device model and breaking AES using classic Differential Power Analysis (DPA).
@@ -36,7 +34,7 @@ Here's a detailed summary of each lab topic in the "Physical Attack Lab Report":
   - Analyzing and comparing these grouped traces.
 - **Reason to be Vulnerable:** Power consumption patterns can leak information about the data being manipulated, revealing the input values.
 
-### 4. Recovering AES Key from a Single Bit of Data (Topic 2)
+### 4. Recovering AES Key from a Single Bit of Data
 
 - **Attack Strategy:** Recovering a single bit of data from the internal state of an AES implementation.
 - **Purpose of Attack:** To understand device leakage and recover cryptographic information.
@@ -48,7 +46,7 @@ Here's a detailed summary of each lab topic in the "Physical Attack Lab Report":
   - Matching the observed data with the simulated output to find the correct key.
 - **Reason to be Vulnerable:** Even a single bit of data leakage can compromise the security of the encryption, allowing key recovery.
 
-### 5. DPA on Firmware Implementation of AES (Topic 3)
+### 5. DPA on Firmware Implementation of AES
 
 - **Attack Strategy:** Conducting Differential Power Analysis (DPA) on AES implemented in firmware.
 - **Purpose of Attack:** To distinguish traces based on the value of a bit in the SBox output, revealing the key.
@@ -60,7 +58,7 @@ Here's a detailed summary of each lab topic in the "Physical Attack Lab Report":
   - Dividing traces into groups and averaging them to find the key.
 - **Reason to be Vulnerable:** Variations in power consumption during the SBox operation can leak information about the key bits.
 
-### 6. CPA on Firmware Implementation of AES (Topic 2, Part 4)
+### 6. CPA on Firmware Implementation of AES
 
 - **Attack Strategy:** Using Correlation Power Analysis (CPA) to recover the AES key from power traces.
 - **Purpose of Attack:** To exploit the linear relationship between the hamming weight of the S-box output and power consumption.
@@ -72,12 +70,7 @@ Here's a detailed summary of each lab topic in the "Physical Attack Lab Report":
   - Calculating correlations to find the most likely key.
 - **Reason to be Vulnerable:** The hamming weight of the S-box output is linearly related to the power consumption, allowing key recovery through statistical analysis.
 
-### 7. ChipWhisperer Analyzer CPA Attack (Topic 3, Part 4)
-
-- **Attack Strategy:** Employing ChipWhisperer for CPA to recover an AES key.
-- **Purpose
-
-### 7. ChipWhisperer Analyzer CPA Attack (Topic 3, Part 4)
+### 7. ChipWhisperer Analyzer CPA Attack
 
 - **Attack Strategy:** Using ChipWhisperer's library for Correlation Power Analysis (CPA) to extract an AES key.
 - **Purpose of Attack:** To demonstrate the effectiveness of CPA using correlation rather than simple analysis of differences.
@@ -89,7 +82,7 @@ Here's a detailed summary of each lab topic in the "Physical Attack Lab Report":
   - Evaluating the Partial Guessing Entropy (PGE) to determine how many traces are needed for a reliable guess.
 - **Reason to be Vulnerable:** The approach successfully identifies the correct AES key with high precision using only 50 traces, showcasing the effectiveness of the CPA technique in a controlled environment.
 
-### 8. Introduction to Clock Glitching (Topic 1, Part 1)
+### 8. Introduction to Clock Glitching
 
 - **Attack Strategy:** Exploring fault injections through clock glitching to create hardware malfunctions.
 - **Purpose of Attack:** To understand how inducing glitches in the clock signal can cause hardware to behave unpredictably.
@@ -101,7 +94,7 @@ Here's a detailed summary of each lab topic in the "Physical Attack Lab Report":
   - Analyzing the outcomes to identify successful glitch parameters.
 - **Reason to be Vulnerable:** Clock glitching can cause a processor to skip instructions or behave irregularly, potentially bypassing security checks or altering expected outputs.
 
-### 9. Clock Glitching to Bypass Password (Topic 2, Part 1)
+### 9. Clock Glitching to Bypass Password
 
 - **Attack Strategy:** Using clock glitching to bypass a password check in firmware.
 - **Purpose of Attack:** To demonstrate how fault injection can be used to manipulate software execution and bypass security measures.
@@ -112,5 +105,3 @@ Here's a detailed summary of each lab topic in the "Physical Attack Lab Report":
   - Implementing a glitching procedure that manipulates multiple parameters.
   - Attempting to bypass the password check by altering the normal flow of the program.
 - **Reason to be Vulnerable:** While the lab did not successfully bypass the password, it demonstrates the potential of fault injection as a method to compromise software security.
-
-These summaries provide an overview of the strategies, purposes, key points, approaches, and vulnerabilities explored in each lab topic of the "Physical Attack Lab Report".
